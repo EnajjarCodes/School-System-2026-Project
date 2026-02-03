@@ -1,4 +1,4 @@
-from Stri import kint
+
 import random
 import json
 
@@ -81,7 +81,7 @@ class School:
 
 
     def search_student(self, student):
-        id = kint(input("Enter The Student ID To Find Them "))
+        id = input("Enter The Student ID To Find Them ")
         student.id = id
         if student in self.students:
             return student.get_info()
@@ -90,22 +90,19 @@ class School:
         
 
     def show_students(self):
-        for student in self.students:
-            return student
+        return self.students
         
 
     def update_student_info(self, student):
-      while True:
         print("Option 1: 1. Update Student Name")
         print("Option 2: 2. Update Student Age")
         print("Option 3: 3. Update Student Grades")
         print("Option 4: 4. Update Student Class")
         print("Option 5: 5. Update Student Attendence")
-        print("Option 6. 6. Exit")
         choose = input("")
 
         if choose == "1":
-            name = kint(input("Enter Updated Name "))
+            name = input("Enter Updated Name ")
             student.name = name
             return f"Updated Info: {student.get_info()}"
             
@@ -141,20 +138,18 @@ class School:
             student.attendence = attendence
             return f"Updated Info: {student.get_info()}"
         
-        elif choose == "6":
-            break
+        else:
+            return "Invalid Number Chosen"
 
 
     def update_teacher_info(self, teacher):
-      while True:
         print("Option 1: 1. Update Teacher Name")
         print("Option 2: 2. Update Teacher Assigned Class")
         print("Option 3: 3. Update Teacher Subject")
-        print("Option 4. 4. Exit")
         choose = input("")
 
         if choose == "1":
-            name = kint(input("Enter Updated Name "))
+            name = input("Enter Updated Name ")
             teacher.teacher_name = name
             return f"Updated Info: {teacher.get_info()}"
             
@@ -174,9 +169,8 @@ class School:
             teacher.subject = subject
             return f"Updated Info: {teacher.get_info()}"
             
-        elif choose == "4":
-            break
-
+        else:
+            return "Invalid Number Chosen!"
 
     def get_academic_status(self):
         if self.average_grade >= 90:
@@ -282,7 +276,7 @@ class Teacher:
         return "Enter A Number Next Time"
 
     def choose_subject(self):
-        choose_subject = kint(input("Select The Subject You Would Like To Teach: ")).capitalize()
+        choose_subject = input("Select The Subject You Would Like To Teach: ").capitalize()
         if choose_subject in ["Maths", "Math", "Mathematics",
                              "English",
                              "Business",
@@ -302,8 +296,12 @@ class Teacher:
     def get_info(self):
         return f"Name: {self.teacher_name}, Teaching Subject: {self.subject}, Assigned Class: {self.assigned_class}, Id: {self.id}"  
 
-school = School("Test High School")
-print(school.role())
+
+
+   
+   
+   
+    
 
 
 
@@ -311,4 +309,5 @@ print(school.role())
    
    
     
+
 
