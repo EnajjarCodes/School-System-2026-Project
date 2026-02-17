@@ -1,0 +1,76 @@
+[
+  {
+    "id": 18,
+    "name": "Emma",
+    "age": 12,
+    "grades": [
+      100
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 23,
+    "name": "Mohammed enajjar",
+    "age": 12,
+    "grades": [
+      90,
+      80,
+      70
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 10,
+    "name": "John",
+    "age": 12,
+    "grades": [
+      20
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 27,
+    "name": "John",
+    "age": 12,
+    "grades": [
+      2
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 1,
+    "name": "Dniwq",
+    "age": 12,
+    "grades": [
+      2
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 13,
+    "name": "John",
+    "age": 12,
+    "grades": [
+      2
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 2,
+    "name": "John",
+    "age": 12,
+    "grades": [
+      2
+    ],
+    "attendance": "Unknown"
+  },
+  {
+    "id": 30,
+    "name": "C:\\users\\moham\\onedrive\\desktop\\moodieapps\\.venv-1\\scripts\\python.exe c:/users/moham/onedrive/desktop/moodieapps/school-system-2026-project/school.py",
+    "age": 12,
+    "grades": [
+      2
+    ],
+    "attendance": "Unknown"
+  }
+]{"id": 18, "name": "Hdfywehf", "age": 2, "grades": [2], "attendance": null}{"id": 7, "name": "Hdewyf", "age": 12, "grades": [2], "attendance": null}

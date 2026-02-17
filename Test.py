@@ -4,11 +4,10 @@ from contextlib import redirect_stdout
 import io
 
 
-from Admin import Admin
-from School import School
-from Student import Student
-from Teacher import Teacher
-
+from admin import Admin
+from school import School
+from student import Student
+from teacher import Teacher
 
 # -------------------------
 # INPUT MOCK SYSTEM
@@ -28,10 +27,6 @@ class InputMock:
         import io
 
 
-        from Admin import Admin
-        from School import School
-        from Student import Student
-        from Teacher import Teacher
 
 
         # -------------------------
