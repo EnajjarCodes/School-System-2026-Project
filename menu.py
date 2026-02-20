@@ -116,23 +116,19 @@ class Menu:
                 print("Invalid Number Chosen")
 
         while isinstance(user, Student):
-            print(f"Welcome {user.name}")
-            print("Option 1: Show Academic Status")
-            print("Option 2: Show Student Info")
-            print("Option 3: Update Student Info")
-            print("Option 4: Exit")
+            print(f"Welcome {user.name} What Would You Like To Do")
+            print("Option 1: Show Student Info")
+            print("Option 2: Update Student Info")
+            print("Option 3: Exit")
             student_choose = input("").strip()
 
             if student_choose == "1":
-                print(user.get_academic_status())
-                time.sleep(3)
-            elif student_choose == "2":
                 print(user.get_info())
                 time.sleep(5)
-            elif student_choose == "3":
+            elif student_choose == "2":
                 print(user.get_student_info_from_input())
                 time.sleep(3)
-            elif student_choose == "4":
+            elif student_choose == "3":
                 print(f"Bye {user.name}")
                 time.sleep(1.5)
                 break

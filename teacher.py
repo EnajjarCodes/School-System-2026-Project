@@ -1,5 +1,6 @@
 import random
 from student import Student
+from school import School
 
 
 class Teacher:
@@ -17,21 +18,27 @@ class Teacher:
         self.id = id
 
     def get_teacher_info_from_input(self):
-        name = input("Enter The Name Of This Teacher ").capitalize()
+      try:
         Class = int(input("Enter The Class Of This Teacher "))
+        name = input("Enter The Name Of This Teacher ").capitalize()
+      except (ValueError, NameError, TypeError):
+        print("Has To Be A Number")
+
         while Class > 12:
             print(f"{Class} Has To Be From 1-12. Try Again:")
+        try:
             Class = int(input("Enter The Class Of This Student"))
+        except (ValueError, NameError, TypeError):
+            print("Has To Be A Number")
 
         self.teacher_name = name
         self.assigned_class = Class
-        # Return a summary string so callers can print the entered info
-        return self.get_info()
 
     def change_student_attendance(self, student=None):
         if student is None:
             student = Student()
             print(student.get_student_info_from_input())
+            
 
         try:
             sAttendance = int(input("Enter This Student's Attendance % "))
@@ -44,13 +51,21 @@ class Teacher:
             return "Enter A Number Next Time"
 
     def change_class(self):
+      try:
         teaching_class = int(input("Enter The Class You Would Like To Teach "))
+      except (ValueError, TypeError, NameError):
+        print("Has To Be A Number")
+
         while teaching_class > 12:
             print("Class Has To Be 12 Or Under! Try Again")
+      try:
             teaching_class = int(input("Enter The Class You Would Like To Teach "))
-        else:
-            self.assigned_class = teaching_class
-            print(f"Teaching Class Is Now {self.assigned_class}")
+      except (ValueError, TypeError, NameError):
+        print("Has To Be A Number")
+
+      else:
+          self.assigned_class = teaching_class
+          print(f"Teaching Class Is Now {self.assigned_class}")
 
     def choose_subject(self):
         choose_subject = input(

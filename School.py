@@ -141,13 +141,19 @@ class School:
         elif choose == "2":
             try:
                 age = int(input("Enter Updated Age "))
-                if age > 18:
+            except ValueError:
+                print("Has To Be A Number!")
+
+                while age > 18:
                     print("Has To Be Under 18! Try Again")
+                try:
+                    age = int(input("Enter Updated Age "))
+                except (ValueError, TypeError, NameError):
+                    print("Has To Be A Number")
                 else:
                     selected_student.age = age
                     print(f"Updated Info: {selected_student.get_info()}")
-            except ValueError:
-                print("Has To Be A Number!")
+
         elif choose == "3":
             grades = list(
                 map(int, input("Enter Updated Grades (separated by space) ").split())
@@ -157,8 +163,12 @@ class School:
         elif choose == "4":
             try:
                 Class = int(input("Enter Updated Class "))
-                if Class > 12:
+                while Class > 12:
                     print("Class Has To Be 12 Or Under! Try Again")
+                try:
+                    Class = int(input("Enter Updated Class "))
+                except (ValueError, TypeError, NameError):
+                    print("Has To Be A Number")
                 else:
                     selected_student.Class = Class
                     print(f"Updated Info: {selected_student.get_info()}")
@@ -167,8 +177,12 @@ class School:
         elif choose == "5":
             try:
                 attendance = int(input("Enter Updated Attendance % "))
-                if attendance > 100:
+                while attendance > 100:
                     print("Has To Be 100% Or Under! Try Again")
+                try:
+                    attendance = int(input("Enter Updated Attendance % "))
+                except (ValueError, TypeError, NameError):
+                    print("Has To Be A Number")
                 else:
                     selected_student.attendence = attendance
                     print(f"Updated Info: {selected_student.get_info()}")
@@ -197,14 +211,19 @@ class School:
         elif choose == "2":
             try:
                 assigned_class = int(input("Enter Updated Class "))
+            except (ValueError, NameError):
+                print("Has To Be A Number!")
+
                 while assigned_class > 12:
                     print("Class Has To Be Over 12! Try Again")
-                    assigned_class = int(input("Enter Updated Class "))
+                    try:
+                        assigned_class = int(input("Enter Updated Class "))
+                    except (ValueError, NameError):
+                        print("Has To Be A Number!")
                 else:
                     teacher.assigned_class = assigned_class
                     return f"Updated Info: {teacher.get_info()}"
-            except (ValueError, NameError):
-                print("Has To Be A Number!")
+            
 
         elif choose == "3":
             subject = input("Enter Updated Teaching Subject ")
